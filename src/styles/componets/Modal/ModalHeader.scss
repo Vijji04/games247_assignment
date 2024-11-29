@@ -1,0 +1,62 @@
+@import '../../base/mixxins'; 
+@import '../../base/variables'; 
+
+.headerContainer {
+  height: 42px;
+  width: 400px;
+  background-color: map-get($colours, 'modalHeaderBackground');
+  color: map-get($colours, 'modalHeaderText');
+  @include flexbox(space-between, center);
+
+  @media (max-width: map-get($breakpoints, 'phone')) {
+    @include flexbox($justify: null, $align: null);
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    background-color: transparent;
+    color: black;
+  }
+
+  .headerWrapper {
+    width: 100vw;
+    padding: 1rem;
+    font-family: map-get($fonts, 'primary');
+    font-weight: map-get($fonts, 'primary-bold');
+    font-size: map-get($font-sizes, 'large');
+    @include flexbox(space-between, center);
+
+    @media (max-width: map-get($breakpoints, 'phone')) {
+      @include flexbox(center, center);
+      position: relative;
+    }
+
+    .headerText {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    background:none;
+    border: none;
+
+    @media (max-width: map-get($breakpoints, 'phone')) {
+      display: none;
+    }
+  }
+
+  .mobileClose {
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    transform: translateY(-50%);
+
+    @media (min-width: map-get($breakpoints, 'phone')) {
+      display: none;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}

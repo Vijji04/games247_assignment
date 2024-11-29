@@ -1,0 +1,185 @@
+@import '../../base/mixxins'; 
+@import '../../base/variables'; 
+
+
+.gstBenifitContainer{
+    width: 360px;
+    height: 362px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 16px;
+
+    @media (max-width: map-get($breakpoints, 'phone')) {
+        width: 100%; 
+        height: 447px; 
+        margin-top: 24px;
+  }
+
+    .gstBenifitWrapper{
+        padding: 0px 18px;
+
+
+        @media (max-width: map-get($breakpoints, 'phone')) {
+          padding: 0px 16px;
+      }
+    }
+
+        .gstHeader{
+            @include flexbox($justify:space-between, $align:center);
+            border-radius: 8px 8px 0px 0px;
+            background: map-get($colours,'sky-blue' ); 
+            padding: 0px 18px;
+            height: 33px;
+
+            @media (max-width: map-get($breakpoints, 'phone')) {
+                height: 43px;
+                @include flexbox($direction:column,$align:center,$justify:center);
+            }
+        
+
+            .gstHeaderText{
+                margin: 0;
+                font-family: map-get($fonts , 'primary' );
+                font-weight: map-get($fonts , 'primary-regular' );
+                font-size: map-get($font-sizes , 'small' );
+            
+            }
+            .gstMoneyEarned{
+                margin: 0;
+                color: map-get($colours,'primary-green');
+                font-family: map-get($fonts , 'primary' );
+                font-weight: map-get($fonts , 'primary-bold' );
+                font-size: map-get($font-sizes , 'base' );
+            }
+
+          
+
+        }
+
+        .gstDepositWorksWrapper{
+            padding: 0px 18px;
+            @include flexbox(center, center); 
+
+
+            .heroText{
+                .heroQuestion{
+                    font-family: map-get($fonts , 'primary' );
+                    font-weight: map-get($fonts , 'primary-bold' );
+                    font-size: map-get($font-sizes , 'base' );
+                }
+            }
+
+            .heroPay{
+                margin-top: 22px;
+                text-align: center;
+            
+                .youPay{
+                    font-family: map-get($fonts , 'primary' );
+                    font-weight: map-get($fonts , 'primary-medium' );
+                    font-size: map-get($font-sizes , 'base' );
+                    margin: 0;
+                }
+                .heroMoney{ 
+                    font-family: map-get($fonts , 'primary' );
+                    font-weight: map-get($fonts , 'primary-bold' );
+                    font-size: map-get($font-sizes , 'x-large' );
+                    margin: 4px;
+
+                }
+                .heroBase{
+                    color: map-get($colours,'modalHeaderBackground');
+                    font-family: map-get($fonts , 'primary' );
+                    font-weight: map-get($fonts , 'primary-medium' );
+                    font-size: map-get($font-sizes , 'x-small' );
+                    margin: 0;
+
+                }
+            }
+
+         
+        }
+
+        .wallet{
+            display: flex;
+            justify-content: center;
+
+            .multipleArrows{
+                margin-top: 3px;
+            }
+
+            .walletCard{
+                margin-top: 200px;
+            }
+        }
+        .footer{
+            @include flexbox($justify:space-between,$align:center);
+           
+            @media (max-width: map-get($breakpoints, 'phone')) {
+            
+            @include flexbox($direction:column,$align:center);
+
+
+            }
+
+           
+            .footerLeft{
+
+                    @media (min-width: 445px) {
+                        .dropArrow {
+                          display: none; 
+                        }
+                  }
+                  
+                
+              
+        
+           @include flexbox($align:center);
+
+           @media (max-width: map-get($breakpoints, 'phone')) {
+                .leftArrow{
+                    display: none;
+                }
+
+          
+        
+    
+
+           @include flexbox($direction:column,$align:center);
+
+            }
+        }
+            .finalReward{
+                display: flex;
+                flex-direction: column;
+                justify-content:end;
+                align-items: flex-end;
+
+             @media (max-width: map-get($breakpoints, 'phone')) {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+          .reward1{
+            margin: 0;
+            font-family: map-get($fonts , 'primary' );
+            font-weight: map-get($fonts , 'primary-medium' );
+            font-size: map-get($font-sizes , 'x-small' );
+          }
+          .reward2{
+            margin: 0;
+            font-family: map-get($fonts , 'primary' );
+            color: map-get($colours,'primary-green');
+            font-size: map-get($font-sizes , 'x-large' );
+          }
+          .reward3{
+            margin: 0;
+            font-family: map-get($fonts , 'primary' );
+            color: map-get($colours,'modalHeaderBackground');
+            font-weight: map-get($fonts , 'primary-medium' );
+            font-size: map-get($font-sizes , 'x-small' );
+          }
+
+        }
+    }
+}

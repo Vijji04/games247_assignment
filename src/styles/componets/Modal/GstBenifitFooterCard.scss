@@ -1,0 +1,62 @@
+@import '../../base/mixxins'; 
+@import '../../base/variables'; 
+
+
+.gstFooterCardContainer{
+    width: 212px;
+    height: 69px;
+    border: 1px solid #00BF36; 
+    background-color: map-get($colours, 'secondary-green');
+    border-radius: 8px;
+    margin-top: 16px;
+
+    @media (max-width: map-get($breakpoints, 'phone')) {
+        width: 288px;
+        height: 87px;
+        @include flexbox($direction:column,$align:center,$justify:center);
+
+    }
+
+    .gstFooterCardtItems{
+        padding: 10px 13.5px;
+
+        @media (max-width: map-get($breakpoints, 'phone')) {
+            @include flexbox($direction:column,$align:center,$justify:center);
+    
+        }
+
+    .test{
+        color:map-get($colours, 'primary-green');
+        margin: 0;}
+
+        .gstFooterCardDesc{
+            margin-top: 4px;
+            @include flexbox($align:center);
+
+        }
+
+        .descriptionText {
+            font-family: map-get($fonts, 'primary');
+            font-weight: map-get($fonts, 'primary-regular');
+            font-size: map-get($font-sizes, 'xx-small');
+        }
+        
+
+        .desc1 {
+            @extend .descriptionText;
+            margin: 0;
+            margin-left: 4px
+        }
+
+        .desc2 {
+            @extend .descriptionText;
+            margin: 4px;
+        }
+        
+        .rummy {
+            @extend .descriptionText;
+            font-weight: map-get($fonts, 'primary-bold');
+        }
+    }
+
+}

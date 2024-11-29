@@ -1,0 +1,45 @@
+@import '../../base/mixxins'; 
+@import '../../base/variables'; 
+
+.notificationContainer {
+    height: 90px;
+    width: 360px;
+    border: 1px solid #EEEEEE; 
+    border-radius: 8px;
+    @include flexbox($direction:column,$justify:space-between);
+
+    @media (max-width: map-get($breakpoints, 'phone')) {
+        width: 100%;
+        // padding: 0px 2px;
+    }
+    .notificationUpperWrapper { 
+        padding: 0rem 13.5px;
+        .notificationUpper {  
+           display: flex;
+           gap: 8px;
+        font-family: map-get($fonts , 'primary' );
+        font-weight: map-get($fonts , 'primary-regular' );
+        font-size: map-get($font-sizes , 'small' );
+        }  
+
+      
+    }
+
+ .notificationBottomWrapper{
+    
+    border-bottom-left-radius: 8px; // Match container's border radius
+    border-bottom-right-radius: 8px;
+    background: linear-gradient(90deg, #E5F9FF 0%, #F3FFE0 100%);
+    padding: 0rem 9px;
+    .notificationBottom{
+        gap: 8px;
+    @include flexbox($align:center);
+        font-family: map-get($fonts , 'primary' );
+        font-weight: map-get($fonts , 'primary-bold' );
+        font-size: map-get($font-sizes , 'base' );
+ 
+    }
+ }
+
+  
+}

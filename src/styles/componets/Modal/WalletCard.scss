@@ -1,0 +1,46 @@
+@import '../../base/mixxins'; 
+@import '../../base/variables'; 
+
+
+.walletContainer{
+    height:51px ;
+    width: 158px;
+    border-radius:8px ;
+    border: 1px solid #EEEEEE; 
+    margin-top: 28px;
+
+    .walletItems{
+        @include flexbox($direction:column,$align:center,$justify:center);
+        text-align: center;
+        margin-top: 8px;
+
+    }
+    .walletMoney{
+        margin: 4px;
+        font-family: map-get($fonts , 'primary' );
+        font-weight: map-get($fonts , 'primary-bold' );
+        font-size: map-get($font-sizes , 'small' );
+    }
+
+    .redText {
+        @extend .walletMoney;
+        color: red;
+
+    }
+
+    .walletMessage{
+        margin: 0;
+        font-family: map-get($fonts , 'primary' );
+        font-weight: map-get($fonts , 'primary-regular' );
+        font-size: map-get($font-sizes , 'small' );
+
+        @media (max-width: map-get($breakpoints, 'phone')) {
+            font-size: map-get($font-sizes , 'xx-small' );
+
+        }
+    
+    }
+
+
+
+}

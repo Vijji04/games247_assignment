@@ -1,0 +1,15 @@
+@mixin flexbox($justify: null, $align: null, $direction: row, $center-screen: false) {
+    display: flex;
+    @if $justify != null {
+        justify-content: $justify;
+    }
+    @if $align != null {
+        align-items: $align;
+    }
+    flex-direction: $direction;
+
+    @if $center-screen == true {
+        height: 100vh;
+        width: 100vw;
+    }
+}

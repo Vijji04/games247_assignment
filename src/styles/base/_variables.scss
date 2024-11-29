@@ -1,0 +1,37 @@
+$colours: (
+   'primary-green': #77AA00,
+    'secondary-green':#E7fff1,
+   'primary-red': #E82217,
+   'sky-blue':  linear-gradient(90deg, #D8EAFF 0%, #E9F4FF 100%),
+   'modalHeaderBackground': #8E8E8E,
+   'modalHeaderText':white,
+);
+
+
+$fonts: (
+'primary': 'Roboto', 
+  'primary-regular': 400,
+  'primary-medium': 500,
+  'primary-bold': 700,  
+  'primary-italic': 400, 
+);
+
+$font-sizes: (
+    'xx-small':10px,
+    'x-small':11px,
+    'small': 12px,
+    'base': 15px,
+    'medium': 16px,
+    'large': 18px,
+    'x-large': 26px,
+    'xx-large': 32px
+);
+
+
+$breakpoints: (
+  'phone': 430px,
+  // 'potrait':667px,
+  'tablet': 667px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
