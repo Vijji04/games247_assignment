@@ -10,10 +10,12 @@
 
     @media (max-width: map-get($breakpoints, 'phone')) {
         width: 100%;
-        // padding: 0px 2px;
     }
     .notificationUpperWrapper { 
         padding: 0rem 13.5px;
+        @media (max-width: map-get($breakpoints, 'phone')) {
+            padding: 0px 20px;
+        }
         .notificationUpper {  
            display: flex;
            gap: 8px;
